@@ -1,0 +1,127 @@
+/* Container to hold both tables */
+.table-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: row;
+  margin: 5px;
+  margin-left: -2px;
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d); /* Deep emerald to navy */
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* Wrapper for individual tables */
+.table-wrapper {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+/* Styling for table headers and cells */
+th, td {
+  padding: 12px;
+  border: 1px solid rgba(217, 232, 229, 0.2); /* Subtle silver-green border */
+  text-align: center;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(to bottom right, #0d1f2d, #1a3c34);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table header background color */
+thead th {
+  background: linear-gradient(to bottom right, #2a6f5e, #1a3c34); /* Teal to emerald */
+  font-family: 'Palatino', serif;
+  color: #d9e8e5;
+}
+
+/* Cells for dynamic width increase */
+tbody .tbd {
+  background: linear-gradient(to bottom right, #2ecc71, #27ae60); /* Green gradient */
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  width: 50px;
+  color: #d9e8e5;
+}
+
+tbody .tbd1 {
+  background: linear-gradient(to bottom right, #e74c3c, #c0392b); /* Red gradient */
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  width: 50px;
+  color: #d9e8e5;
+}
+
+/* Styling when a cell is hovered */
+tbody .tbd:hover {
+  width: 70px;
+  background: linear-gradient(to bottom right, #27ae60, #2ecc71);
+}
+
+tbody .tbd1:hover {
+  width: 70px;
+  background: linear-gradient(to bottom right, #c0392b, #e74c3c);
+}
+
+/* Table container spacing */
+.table-container th,
+.table-container td {
+  padding: 12px;
+  width: 70%;
+  height: 15px;
+}
+
+/* Video Container */
+.video-container {
+  display: flex;
+  height: 315px;
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container .left {
+  flex: 1;
+  background: linear-gradient(to bottom right, #0d1f2d, #1a3c34);
+  box-sizing: content-box;
+}
+
+.video-container .left .playr {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@keyframes colorChange {
+  0% { color: #d9e8e5; }
+  25% { color: #b0c4c0; }
+  50% { color: #2ecc71; }
+  75% { color: #c0c0c0; }
+  100% { color: #d9e8e5; }
+}
+
+.video-container .left .playr h1 {
+  font-size: 22px;
+  margin: 8px 0;
+  animation: colorChange 5s infinite;
+  font-family: 'Palatino', serif;
+}
+
+.video-container .left .playr img {
+  width: 90px;
+  height: 45px;
+  object-fit: contain;
+  color: #d9e8e5;
+  box-sizing: content-box;
+}
+
+.video-container .right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

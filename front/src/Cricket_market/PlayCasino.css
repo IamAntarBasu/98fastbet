@@ -1,0 +1,61 @@
+/* PlayCasino.css */
+.casino-container {
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d); /* Deep emerald to navy */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  font-family: 'Palatino', serif;
+  color: #d9e8e5;
+}
+
+.casino-header {
+  background: linear-gradient(to bottom right, #2a6f5e, #1a3c34); /* Teal to emerald */
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  font-size: 18px;
+  color: #d9e8e5;
+  text-align: center;
+}
+
+.casino-content {
+  padding: 20px;
+  background: linear-gradient(to bottom right, #0d1f2d, #1a3c34);
+  border-radius: 0 0 10px 10px;
+}
+
+.casino-button {
+  background: linear-gradient(to bottom right, #c0c0c0, #8a8a8a); /* Silver gradient */
+  color: #0d1f2d;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.casino-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, #8a8a8a, #c0c0c0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .casino-container {
+    padding: 10px;
+  }
+
+  .casino-header {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .casino-content {
+    padding: 15px;
+  }
+
+  .casino-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,342 @@
+.tournament_winner {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.odds-value-lk{
+  font-weight: 600;
+    font-size: 12px !important ;
+}
+
+.T20_header {
+  padding: 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.T20_header h1 {
+  margin: 0;
+  font-size: 11px;
+  color: #fff;
+}
+
+.tournament_winner_table {
+  padding: 15px;
+}
+
+.odds-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.odds-row {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.odds-row:hover {
+  background: #f0f2f5;
+}
+
+.team-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.winning {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.winning.positive {
+  color: rgb(8, 113, 74);
+}
+
+.winning.negative {
+  color: rgb(201, 24, 79);
+}
+
+.back-result, .lay-result {
+  width: 60px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.back-btn, .lay-btn {
+  width: 84px;
+  padding: 16px 11px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* .back-btn:hover, .lay-btn:hover {
+  background: #f0f2f5;
+} */
+
+/* .back-btn.selected {
+  background: rgb(8, 113, 74);
+  color: white;
+  border-color: rgb(8, 113, 74);
+}
+
+.lay-btn.selected {
+  background: rgb(201, 24, 79);
+  color: white;
+  border-color: rgb(201, 24, 79);
+} */
+
+.back-btn {
+  background: #d97e7e;  /* Light blue */
+  color: #ffffff;
+}
+
+.back-btn:hover {
+  background: #bd3535;
+   /* Slightly darker blue on hover */
+}
+
+.back-btn.selected {
+   background: #9e1a1a;  /* Dark blue when selected */
+}
+
+.lay-btn {
+  background: #7db3f0;  /* Light red */
+  color: #ffffff;
+}
+
+.lay-btn:hover {
+  background: #357abd;  /* Slightly darker red on hover */
+}
+
+.lay-btn.selected {
+  background: #357abd;  /* Dark red when selected */
+}
+
+.odds-value {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.rate-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.back-btn.selected .rate-value,
+.lay-btn.selected .rate-value {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .odds-row {
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+  }
+
+  .back-result, .lay-result {
+    width: 50px;
+  }
+
+  .back-btn, .lay-btn {
+    width: 70px;
+    padding: 6px 10px;
+  }
+}
+
+.tournament_winner .T20_header {
+  margin-bottom: 0;
+}
+
+/* .custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.custom-table th:first-child,
+.custom-table td:first-child {
+  width: 50%;
+}
+
+.custom-table td div {
+  display: block;
+  text-align: center;
+}
+
+.custom-table td:not(:first-child) {
+  width: calc(50% / 6);
+}
+
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child) {
+  width: calc(50% / 6);
+}
+
+.custom-table th:nth-child(4) {
+  background-color: rgb(114, 187, 239);
+}
+
+.custom-table th:nth-child(5) {
+  background-color: rgb(250, 169, 186);
+} */
+
+/* Min: Max header with blackish gradient */
+.custom-table th:first-child {
+  background: linear-gradient(90deg, #2f2f2f, #1a1a1a); /* Blackish gradient */
+  color: #fff;
+}
+
+/* Lgaai header with sky blue gradient */
+.custom-table th:nth-child(2) {
+  background: linear-gradient(90deg, #b3e5fc, #81d4fa); /* Light sky blue gradient */
+  color: #333;
+}
+
+/* khaai header with light red gradient */
+.custom-table th:nth-child(3) {
+  background: linear-gradient(90deg, #ffcdd2, #ef9a9a); /* Light red gradient */
+  color: #333;
+}
+
+/* Cell value styling */
+.cell-content .cell-value {
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Lgaai cell value with sky blue gradient */
+.custom-table td:nth-child(2) .cell-value {
+  background: linear-gradient(90deg, #e1f5fe, #b3e5fc); /* Lighter sky blue gradient */
+  color: #333;
+}
+
+/* khaai cell value with light red gradient */
+.custom-table td:nth-child(3) .cell-value {
+  background: linear-gradient(90deg, #ffebee, #ffcdd2); /* Lighter red gradient */
+  color: #333;
+}
+
+
+.profit-show {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scrolling_text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.scrolling_text h3 {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 10s linear infinite;
+  position: relative;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .custom-table {
+    width: 100% !important;
+    font-size: 13px;
+  }
+
+  .profit-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 0 20px;
+  }
+
+  .scrolling_text h3 {
+    animation: scrollText 5s linear infinite;
+  }
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-220%);
+    }
+  }
+}
+.header-row {
+  background: linear-gradient(90deg, #2f2f2f, #1a1a1a); /* Blackish gradient */
+  color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.header-row:hover{
+  background: linear-gradient(90deg, #2f2f2f, #1a1a1a); /* Blackish gradient */
+  color: #fff;
+}
+
+.header-row .team-name {
+  color: #fff;
+}
+
+.odds-headers {
+  display: flex;
+  gap: 38px;
+  margin-left: auto;
+}
+
+.odds-headers .odds-value {
+  width: 80px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+

@@ -1,0 +1,300 @@
+.header {
+  background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #4a4a4a);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.logo-image {
+  background: linear-gradient(45deg, #ffd700, #ffbf00, #ffaa00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  white-space: nowrap;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.withdraw-btn,
+.deposit-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.withdraw-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  color: #fff;
+}
+
+.deposit-btn {
+  background: linear-gradient(135deg, #00cc00, #33ff33);
+  color: #fff;
+}
+
+.withdraw-btn:hover,
+.deposit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-auth-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-component,
+.wallet-component {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.auth-icon {
+  color: #ffd700;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffd700;
+}
+
+.nav-link.active {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+  color: #1a1a1a;
+  padding: 9px 22px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.login-btn svg {
+  margin-right: 5px;
+  color: #1a1a1a;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.signup-btn {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  padding: 9px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.signup-btn:hover {
+  background: #ffd700;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: white;
+  padding: 0px;
+  border-radius: 20px;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 10px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .desktop-auth-container {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 5px 0;
+    background-color: black;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+  .logo-buttons-container {
+    flex-grow: 0;
+    gap: 5px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+  }
+
+  .logo-image {
+    font-size: 20px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: #1a1a1a;
+  }
+
+  .desktop-auth-container {
+    display: none; /* Hide profile/wallet/logout in mobile menu */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .action-buttons{
+    gap: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    font-size: 18px;
+  }
+
+  .withdraw-btn,
+  .deposit-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .auth-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .header-container{
+    padding: 8px 5px
+  }
+}

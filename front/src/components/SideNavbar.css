@@ -1,0 +1,132 @@
+.side-navbar {
+  background: linear-gradient(135deg, #3a3a3a, #000000);
+  padding: 5px 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 58PX;
+}
+
+.side-navbar::-webkit-scrollbar {
+  height: 3px;
+}
+
+.side-navbar::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+  border-radius: 3px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  margin: 0 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.nav-item.active,
+.nav-item.sport-active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffd700;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  color: white;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.menu-toggle-mobile {
+  display: none;
+  border: none;
+  background: #000000;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px 15px;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    padding: 5px 10px;
+    margin: 0 3px;
+  }
+
+  .nav-text {
+    font-size: 10px;
+  }
+
+  .icon-wrapper {
+    margin-right: 4px;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-toggle-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .side-navbar {
+    padding: 5px;
+  }
+
+  .nav-item {
+    padding: 4px 8px;
+  }
+
+  .nav-text {
+    font-size: 9px;
+  }
+
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

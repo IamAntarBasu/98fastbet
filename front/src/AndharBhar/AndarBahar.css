@@ -1,0 +1,538 @@
+/* Base Styles with Premium Gradient Theme */
+.ab-live-video {
+  width: 850px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-right: 15px;
+  margin-left: 11px;
+  background: #aeb9b6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ab-video-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d);
+  color: #e2e201;
+  height: 45px;
+  font-size: 16px;
+  font-family: 'Georgia', serif;
+  /* border-radius: 12px 12px 0 0; */
+}
+
+.ab-date_time {
+  padding: 5px;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  text-align: center;
+  border-radius: 4px;
+  margin-right: -13px;
+  font-family: 'Georgia', serif;
+  color: #e9d8fd;
+}
+
+.ab-live-video-betting-section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 5.2rem;
+}
+
+.ab-my-bet-data {
+  position: sticky;
+  top: 30px;
+}
+
+.ab-my-bet-text, .ab-place-bet-header {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(9deg, #1976d2,  #abc9e9);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Georgia', serif;
+}
+
+.ab-place-bet-header {
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d);
+  color: #e2e201;
+  position: relative;
+}
+
+.ab-bet-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.ab-bet-table thead {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  color: #e9d8fd;
+}
+
+.ab-bet-table th,
+.ab-bet-table td {
+  padding: 12px 9px;
+  text-align: center;
+  border: 1px solid rgba(233, 216, 253, 0.2);
+}
+
+.ab-bet-table th {
+  background: #e6c6c6;
+  color: black;
+}
+
+.ab-bet-table tbody tr {
+  background: linear-gradient(135deg, #b190ba, #e8b595);
+  color: #1e1b28;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+.ab-bet-table tbody tr:hover {
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  cursor: pointer;
+}
+
+.ab-instruction {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4a00e0, #2a004f);
+  border-radius: 10px;
+  font-size: 14px;
+  color: #e9d8fd;
+  margin-top: 15px;
+}
+
+.ab-content {
+  display: flex;
+  align-items: center;
+}
+
+.ab-message-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #c4b5fd, #8e2de2);
+  font-size: 28px;
+  color: #2a004f;
+  z-index: 10;
+}
+
+.ab-message-text {
+  white-space: nowrap;
+  animation: ab-scroll-animation 17s linear infinite;
+}
+
+@keyframes ab-scroll-animation {
+  0% { transform: translateX(120%); }
+  100% { transform: translateX(-100%); }
+}
+
+.ab-last-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 15px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: #e9d8fd;
+  height: 45px;
+  font-size: 16px;
+  width: 97%;
+}
+
+.ab-ball-div {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.ab-ball-div div {
+  display: flex;
+  gap: 5px;
+}
+
+.ab-ball {
+  background: linear-gradient(135deg, #c4b5fd, #8e2de2);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #2a004f;
+  font-weight: bold;
+}
+
+.ab-right-sidebar {
+  width: 42%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #d0f3eb;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ab-place-bet {
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .ab-place-bet {
+    display: none;
+  }
+}
+
+.ab-place-bet-header2 {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  background: linear-gradient(90deg, #1976d2, #2196f3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+
+.ab-place-bet-data {
+  height: 50px;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  justify-content: space-between;
+  color: #2196f3;
+}
+
+.ab-place-bet-data input {
+  width: 29%;
+  height: 35px;
+  background: white;
+  border: 1px solid #e9d8fd;
+  color: black;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.ab-place-bet-stake-buttons {
+  max-width: 628px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  border-top: 1px solid rgba(233, 216, 253, 0.2);
+}
+
+.ab-place-bet-stake-buttons button {
+  height: 35px;
+  width: 80px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #2196f3, #1976d2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ab-place-bet-stake-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.ab-place-bet-buttons {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+
+.ab-place-bet-buttons button {
+  height: 35px;
+  width: 80px;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ab-place-bet-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.ab-edit {
+  background: linear-gradient(135deg, #a78bfa, #8e2de2);
+  color: #e9d8fd;
+}
+
+.ab-reset {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  color: #e9d8fd;
+}
+
+.ab-submit {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: #e9d8fd;
+}
+
+.ab-right-sidebar-for-mobile {
+  display: none;
+}
+
+/* Andar Bahar Specific Styles */
+.ab-andhar-table, .ab-bahar-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #1a3c34;
+  font-family: 'Georgia', serif;
+}
+
+.ab-andar-container-bahar {
+  background: #aeb9b6;
+  font-family: 'Georgia', serif;
+  color: #1a3c34;
+  text-align: center;
+  padding: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+  .ab-live-video-betting-section {
+    padding-top: 1.2rem;
+  }
+}
+
+.ab-andhar-table table, .ab-bahar-table table {
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.ab-andhar-table td, .ab-bahar-table td {
+  width: 55px;
+  height: 110px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ab-andhar-table td img, .ab-bahar-table td img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ab-andhar-table td img.ab-highlight, .ab-bahar-table td img.ab-highlight {
+  border: 3px solid #c4b5fd;
+}
+
+.ab-center-card img {
+  width: 130px;
+  margin: 25px 0;
+  border: 6px solid #e9d8fd;
+  border-radius: 8px;
+  transition: border 0.5s ease-in-out;
+}
+
+.ab-winner {
+  color: #e9d8fd;
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.ab-winner2 {
+  color: #e9d8fd;
+  background: linear-gradient(135deg, #34d399, #10b981);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.ab-andrbtn {
+  background: linear-gradient(to bottom right, #1a3c34, #0d1f2d);
+  color: #e2e201;
+  padding: 10px 20px;
+  margin: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.ab-andrbtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #34d399, #8e2de2);
+}
+
+.ab-betting-system {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ab-table-bahar-container {
+  background: #aeb9b6;
+  color: #1a3c34;
+  padding: 15px;
+}
+
+.ab-andhar-table h2, .ab-bahar-table h2 {
+  border-bottom: 1px solid #1a3c34;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ab-betting-system {
+    gap: 0px;
+  }
+
+  .ab-andrbtn{
+    margin: 8px;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  .ab-live-video {
+    width: 100%;
+    border-radius: 0px;
+    margin: 60px 0 0 0;
+  }
+
+  .ab-right-sidebar {
+    display: none;
+  }
+
+  .ab-video-header {
+    font-size: 14px;
+  }
+
+  .ab-right-sidebar-for-mobile {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    background: #aeb9b6;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .ab-place-bet-header, .ab-place-bet-stake-buttons, .ab-my-bet-text {
+    width: 100%;
+  }
+
+  .ab-andhar-table table, .ab-bahar-table table {
+    width: 100%;
+    height: auto;
+  }
+
+  .ab-andhar-table td, .ab-bahar-table td {
+    width: 7%;
+    height: auto;
+    padding: 3px;
+  }
+
+  .ab-andhar-table td img, .ab-bahar-table td img {
+    width: 273%;
+    height: 120%;
+  }
+
+  .ab-center-card img {
+    width: 80px;
+    margin: 15px 0;
+  }
+
+  .ab-winner, .ab-winner2 {
+    font-size: 16px;
+    height: 60px;
+  }
+
+  .ab-andrbtn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Popup Styles */
+.ab-bet-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ab-bet-popup-content {
+  background: #fff;
+  padding: 0;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ab-close-popup {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.ab-close-popup:hover {
+  color: #e9d8fd;
+}

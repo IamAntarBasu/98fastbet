@@ -1,0 +1,113 @@
+/* Container to hold both tables */
+.table-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ 
+  flex-direction: row;
+  margin: 3px;
+margin-left: -2px;
+}
+
+/* Wrapper for individual tables */
+.table-wrapper {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+/* Styling for table headers and cells */
+th, td {
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header background color */
+thead th {
+  background: linear-gradient(to bottom right, #2d3748, #1a202c);
+  font-family: fangsong;
+  color: white;
+}
+
+/* Cells for dynamic width increase */
+tbody .tbd {
+  background-color: aqua;
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  width: 50px; /* Initial width */
+}
+tbody .tbd1 {
+  background-color: rgb(217, 58, 188);
+  cursor: pointer;
+  transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  width: 50px; /* Initial width */
+}
+
+/* Styling when a cell is hovered */
+tbody .tbd:hover {
+  width: 70px; /* Increased width */
+  background-color: lightblue; /* Slightly darker shade for hover effect */
+}
+
+/* Table container spacing */
+.table-container th,
+.table-container td {
+  padding: 10px;
+  width: 70%; /* Allow cells to adjust dynamically */
+  height: 10px;
+}
+
+
+.video-container {
+  display: flex;
+  height: 315px; /* Match the video height */
+}
+
+.video-container .left {
+  flex: 1;
+  background-color: rgb(16, 16, 20);
+  box-sizing:content-box;
+  
+}
+.video-container .left .playr {
+  margin-bottom: 10px; /* Space between player sections */
+  /* Center-align the content */
+  
+}
+
+@keyframes colorChange {
+  0% { color: rgb(141, 208, 126); }
+  25% { color: rgb(144, 150, 144); }
+  50% { color: rgb(45, 180, 68); }
+  75% { color: rgb(173, 162, 141); }
+  100% { color: rgb(196, 148, 208); }
+}
+
+.video-container .left .playr h1 {
+  font-size: 20px; 
+  margin: 5px 0; 
+  animation: colorChange 5s infinite;
+}
+
+.video-container .left .playr img {
+  width: 80px; /* Set image size */
+  height: 38px;
+  object-fit: contain; /* Maintain aspect ratio */
+  color: #f4f4f4;
+  box-sizing:content-box;
+}
+
+
+.video-container .right {
+  flex: 2; /* Adjust the ratio of left and right sections */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 

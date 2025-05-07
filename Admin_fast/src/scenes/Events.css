@@ -1,0 +1,161 @@
+/* General card styling */
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card header styling */
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-header.upcoming {
+    background-color: #4f46e5; /* Indigo */
+  }
+  
+  .card-header.live {
+    background-color: #d97706; /* Amber */
+  }
+  
+  /* Table styling */
+  .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .event-table th,
+  .event-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    color: black;
+  }
+  
+  .event-table th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    color: #374151;
+  }
+  
+  .no-event td {
+    text-align: center;
+    font-style: italic;
+    color: #9ca3af;
+  }
+  
+  /* Grid layout for the tables */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+  
+  .col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+  
+  /* Utility classes */
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .mt-12 {
+    margin-top: 3rem;
+  }
+  
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  
+  /* Create Event Button */
+  .create-event-btn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-event-btn:hover {
+    background-color: #3730a3;
+  }
+  
+
+
+  @media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr); /* Maintain same column count */
+    }
+
+    .col-span-6 {
+        grid-column: span 12 / span 12; /* Take full width on smaller screens */
+    }
+
+    .col-span-12 {
+        grid-column: span 12 / span 12;
+    }
+
+    .p-4 {
+        padding: 0.75rem; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr); /* Maintain structure */
+    }
+
+    .col-span-6 {
+        grid-column: span 12 / span 12; /* Same as above */
+    }
+
+    .col-span-12 {
+        grid-column: span 12 / span 12;
+    }
+
+    .p-4 {
+        padding: 0.5rem; /* Further reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr); /* Maintain grid structure */
+    }
+
+    .col-span-6 {
+        grid-column: span 12 / span 12; /* Ensure full width */
+    }
+
+    .col-span-12 {
+        grid-column: span 12 / span 12;
+    }
+
+    .card-header {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .p-4 {
+        padding: 0.25rem; /* Smallest padding for compact view */
+    }
+}

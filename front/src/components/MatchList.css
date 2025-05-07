@@ -1,0 +1,340 @@
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .tab-button {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+  
+  .tab-button.active {
+    background-color: #e53e3e;
+    color: #ffffff;
+  }
+  
+  .tab-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .tab-button.active:hover {
+    background-color: #e53e3e;
+  }
+  
+  .button-icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+  
+  .trophy-icon {
+    height: 24px;
+    width: 24px;
+    color: #1a1a1a;
+  }
+  
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+  
+  .red-icon {
+    color: #e53e3e;
+  }
+  
+  .gray-icon {
+    color: #4a5568;
+  }
+  
+  /* Large Desktop View (1200px and above) */
+  @media (min-width: 1200px) {
+    .MatchListHeader {
+      padding: 12px 16px;
+    }
+  
+    .SportTitle h2 {
+      font-size: 18px;
+    }
+  
+    .tab-button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  
+    .TableHeader th,
+    .TableBody td {
+      padding: 8px;
+      font-size: 13px;
+    }
+  
+    .OddsContainer {
+      flex-direction: column;
+      gap: 1px;
+    }
+  
+    .BackButton,
+    .LayButton {
+      padding: 3px 0;
+      font-size: 12px;
+    }
+  }
+  
+  /* Desktop View (1024px to 1199px) */
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    .MatchListHeader {
+      padding: 10px 14px;
+    }
+  
+    .SportTitle h2 {
+      font-size: 16px;
+    }
+  
+    .tab-button {
+      padding: 5px 10px;
+      font-size: 11px;
+    }
+  
+    .TableHeader th,
+    .TableBody td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    .OddsContainer {
+      flex-direction: column;
+      gap: 1px;
+    }
+  
+    .BackButton,
+    .LayButton {
+      padding: 3px 0;
+      font-size: 11px;
+    }
+  }
+  
+  /* Tablet View (768px to 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .MatchListHeader {
+      padding: 8px 12px;
+      flex-direction: row;
+      gap: 8px;
+    }
+  
+    .SportTitle h2 {
+      font-size: 14px;
+    }
+  
+    .tab-button {
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+  
+    .MatchTable {
+      display: block;
+    }
+  
+    .TableHeader {
+      display: table-header-group;
+    }
+  
+    .TableBody {
+      display: table-row-group;
+    }
+  
+    .TableBody tr {
+      display: table-row;
+    }
+  
+    .TableBody td {
+      display: table-cell;
+      padding: 6px;
+      font-size: 11px;
+    }
+  
+    .OddsContainer {
+      flex-direction: column;
+      gap: 1px;
+    }
+  
+    .BackButton,
+    .LayButton {
+      padding: 3px 0;
+      font-size: 11px;
+    }
+  
+    .MatchTitle {
+      font-size: 12px;
+    }
+  
+    .MatchMeta {
+      font-size: 10px;
+    }
+  
+    .LiveTag {
+      font-size: 9px;
+      padding: 1px 5px;
+    }
+  }
+  
+  /* Mobile View (767px and below) */
+  @media (max-width: 767px) {
+    .MatchListHeader {
+      padding: 8px 10px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .SportTitle h2 {
+      font-size: 14px;
+    }
+  
+    .tab-button {
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+  
+    .MatchTable {
+      display: block;
+    }
+  
+    .TableHeader {
+      display: none;
+    }
+  
+    .TableBody {
+      display: block;
+    }
+  
+    .TableBody tr {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0;
+      background-color: #fff;
+      margin-bottom: 8px;
+    }
+  
+    .TableBody td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-size: 12px;
+      text-align: left;
+    }
+  
+    .TableBody td:first-child {
+      font-weight: 600;
+      margin-bottom: 8px;
+      justify-content: flex-start;
+    }
+  
+    .TableBody td:nth-child(2),
+    .TableBody td:nth-child(3),
+    .TableBody td:nth-child(4) {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .TableBody td:nth-child(5),
+    .TableBody td:nth-child(6),
+    .TableBody td:nth-child(7) {
+      flex: 1;
+      justify-content: center;
+    }
+  
+    .OddsContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      width: 60px;
+    }
+  
+    .BackButton,
+    .LayButton {
+      padding: 4px;
+      font-size: 12px;
+      flex: 1;
+    }
+  
+    .MatchTitle {
+      font-size: 13px;
+    }
+  
+    .MatchMeta {
+      font-size: 11px;
+    }
+  
+    .LiveTag {
+      font-size: 10px;
+      padding: 2px 6px;
+    }
+  }
+  
+  /* Small Mobile View (480px and below) */
+  @media (max-width: 480px) {
+    .MatchListHeader {
+      padding: 6px 8px;
+    }
+  
+    .SportTitle h2 {
+      font-size: 12px;
+    }
+  
+    .tab-button {
+      padding: 3px 6px;
+      font-size: 9px;
+    }
+  
+    .TableBody tr {
+      padding: 8px;
+    }
+  
+    .TableBody td {
+      font-size: 11px;
+    }
+  
+    .OddsContainer {
+      width: 50px;
+    }
+  
+    .BackButton,
+    .LayButton {
+      padding: 3px;
+      font-size: 11px;
+    }
+  
+    .MatchTitle {
+      font-size: 12px;
+    }
+  
+    .MatchMeta {
+      font-size: 10px;
+    }
+  
+    .LiveTag {
+      font-size: 9px;
+      padding: 1px 5px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .bounce {
+    animation: bounce 2s infinite;
+  }

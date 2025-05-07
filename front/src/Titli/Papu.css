@@ -1,0 +1,40 @@
+/* Custom Popup Styles */
+.success-popup {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%) !important;
+    border-radius: 16px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+  }
+  
+  .error-popup {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%) !important;
+    border-radius: 16px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 20px rgba(244, 67, 54, 0.5) !important;
+  }
+  
+  .info-popup {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%) !important;
+    border-radius: 16px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.5) !important;
+  }
+  
+  .win-popup {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    border-radius: 16px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5) !important;
+  }
+  
+  .lose-popup {
+    background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%) !important;
+    border-radius: 16px !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 30px rgba(255, 65, 108, 0.5) !important;
+  }
+  
+  /* Animated Background */
+  .swal2-backdrop-show {
+    background: rgba(0, 0, 0, 0.7) !important;
+  }

@@ -1,0 +1,141 @@
+.component-space {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    background: rgb(76 87 106 / 26%);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .table-container {
+    max-height: 300px; /* Set your desired height here */
+    overflow-y: auto;
+  }
+  .image-preview-container {
+    margin-top: -62px;
+    text-align: center;
+}
+
+.image-preview {
+    max-width: 100px;  /* Adjust this to make the image smaller */
+    max-height: 100px; /* Adjust this to make the image smaller */
+    object-fit: contain; /* Ensures the image doesn't get distorted */
+}
+
+  .card-header {
+    background: #333;
+    color: #ede5e5;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+ 
+  
+  .card-body {
+    padding: 20px;
+    color: black;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .table th, .table td {
+    padding: 11px;
+    text-align: left;
+    color: antiquewhite;
+  }
+  
+  .table th {
+    background: #f4f4f463;
+    font-weight: bold;
+  }
+  
+  .table td {
+    border: none; /* Remove the border from table cells */
+  }
+  .input{
+    margin: 13px;
+    height: 35px;
+    width: 205px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .btn-secondary {
+    background: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-success {
+    background: #28a745;
+    color: #fff;
+    width: 90px;
+  }
+  
+  .upload-label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .component-space {
+      padding: 10px;
+    }
+  
+    .card-body {
+      padding: 10px;
+      color: #333;
+    }
+  
+    .table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    .table th, .table td {
+      white-space: nowrap;
+      padding: 6px;
+      color: antiquewhite;
+     
+    }
+  
+    .pagination {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .upload-label {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
