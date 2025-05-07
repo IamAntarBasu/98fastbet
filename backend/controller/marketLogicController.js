@@ -771,9 +771,9 @@ const placeBet = async (req, res) => {
       return res.status(400).json({ success: false, message: 'You are not able to place bet' });
     } else {
       // Validate all fields
-      if (!userId || !label || !odds || !stake || !balance || !exposure || !time || !type || !match) {
-        return res.status(400).json({ success: false, message: 'All fields are required.' });
-      }
+      // if (!userId || !label || !odds || !stake || !balance || !exposure || !time || !type || !match) {
+      //   return res.status(400).json({ success: false, message: 'All fields are required.' });
+      // }
 
       // Parse numerical values
       const parsedOdds = parseFloat(odds);
