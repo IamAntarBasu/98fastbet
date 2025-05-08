@@ -435,23 +435,19 @@ const T20Content = () => {
         const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/laggai_khai_bets`, newBet);
         
         if (response.status === 201) {
-          // Update wallet data immediately after successful bet placement
           await fetchNameWallet();
           setSuccessMessage("Bet placed successfully.");
           setSuccessPopup(true);
 
-          // Reset form
           setSelectedBet({ label: "", odds: "" });
           setStakeValue("");
           setProfit(0);
         } else {
-          // Revert balance if bet placement fails
           setBalance(prevBalance => prevBalance + amountToDeduct);
           setMarketOddsExposure(prevExposure => prevExposure - newExposure);
           toast.error(response.data.message || "Failed to place bet.");
         }
       } catch (error) {
-        // Revert balance if API call fails
         setBalance(prevBalance => prevBalance + amountToDeduct);
         setMarketOddsExposure(prevExposure => prevExposure - newExposure);
         console.error('API Error:', error);
