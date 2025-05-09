@@ -435,19 +435,23 @@ const T20Content = () => {
         const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/laggai_khai_bets`, newBet);
         
         if (response.status === 201) {
+          // Update wallet data immediately after successful bet placement
           await fetchNameWallet();
           setSuccessMessage("Bet placed successfully.");
           setSuccessPopup(true);
 
+          // Reset form
           setSelectedBet({ label: "", odds: "" });
           setStakeValue("");
           setProfit(0);
         } else {
+          // Revert balance if bet placement fails
           setBalance(prevBalance => prevBalance + amountToDeduct);
           setMarketOddsExposure(prevExposure => prevExposure - newExposure);
           toast.error(response.data.message || "Failed to place bet.");
         }
       } catch (error) {
+        // Revert balance if API call fails
         setBalance(prevBalance => prevBalance + amountToDeduct);
         setMarketOddsExposure(prevExposure => prevExposure - newExposure);
         console.error('API Error:', error);
@@ -507,7 +511,56 @@ const T20Content = () => {
     console.log("oddsData", oddsData);
     console.log("profit", profit)
   }, [balance, exposure]);
-  
+  // useEffect(() => {
+  //   if (balanceChange) {
+  //     if (selectedBetType === "Lgaai" || selectedBetType === "khaai") {
+  //       // setSubmitClick((prev) => (prev + 1))
+  //       setBalanceChange(false);
+  //        if (submitClick >= 1) {
+  //       const placeBet = async () => {
+  //         const now = new Date();
+  //         const newBet = {
+  //           time: now.toISOString(),
+  //           label: selectedBetLabel,
+  //           odds: selectedBetOdds,
+  //           type: selectedBetType,
+  //           stake: currentStake,
+  //           teamAProfit: Number(team1Winnings.toFixed(2)),
+  //           teamBProfit: Number(team2Winnings.toFixed(2)),
+  //           balance: Number(balance.toFixed(2)),
+  //           exposure: Number(exposure.toFixed(2)),
+  //           marketType: 'matchOdds',
+  //           rate: selectedBet.odds,
+  //           userId: JSON.parse(localStorage.getItem('user'))?.id,
+  //           match: match,
+  //           teamIndex: teamInd
+  //           // profit:
+  //         };
+  //         // console.log("newBet", newBet);
+  //         setMyBets((prevBets) => [...prevBets, newBet]);
+  //         try {
+  //           const response = await axios.post(${process.env.REACT_APP_BASE_URL}/api/laggai_khai_bets, newBet);
+  //           if (response.status == 201) {
+  //             fetchWalletData();
+  //             setSuccessMessage("Bet placed successfully.");
+  //             setSuccessPopup(true);
+  //             // toast.success("Bet placed successfully! Your updated wallet balance.");
+  //           } else {
+  //             toast.error(response.data.message || "Failed to place bet.");
+  //           }
+  //         } catch (err) {
+  //           console.error("Error placing bet:", err);
+  //           toast.error("Low Balance recharge Now")
+  //         }
+  //         setSubmitClick(0);
+  //         fetchNameWallet();
+  //         // Reset balanceChange after placing bet
+  //       };
+  //       placeBet();
+  //       }
+  //     }
+  //   }
+  // }, [balanceChange, stakeValue, selectedBet, team1Winnings, team2Winnings, balance, exposure, match, currentStake, teamInd]);
   useEffect(() => {
     if (!id) return;
     fetch(`${process.env.REACT_APP_BASE_URL}/api/odds?market_id=${id}`)
