@@ -4,6 +4,7 @@ const MatchK = require("../models/marketLogicModel");
 exports.createBet = async (req, res) => {
     try {
         const { myBets } = req.body;
+        console.log("myBetsmyBets", myBets);
 
         if (!myBets || !Array.isArray(myBets)) {
             return res.status(400).json({ error: "Invalid bet data" });
@@ -27,7 +28,31 @@ exports.createBet = async (req, res) => {
                 runs,
                 matchName
             } = betData;
-
+//             const result = [
+//         {
+//             label: "MAX O'DOWD RUN(NED VS SCO)ADV",
+//             odds: 120,
+//             type: 'no',
+//             rate: 120,
+//             isOverMarket: true,
+//             stake: 100,
+//             runs: 25,
+//             matchName: 'Netherlands v Scotland',
+//             timestamp: '2025-05-10T06:21:41.137Z',
+//             userId: '681eedf4d71658883bc14e78',
+//             maxProfit: '100.00',
+//             maxLoss: '-180.00',
+//             netExposure: '180.00',
+//             cancelableAmount: '200.00',
+//             totalExposure: '180.00',
+//             balance: '9820.00',
+//             marketType: 'overMarket',
+//             teamAProfit: -100,
+//             exposure: -120,
+//             currentExposure: '180.00',
+//             runValue: 25
+//         }
+// ]
             const parsedExposure = Math.abs(Number(exposure) || 0);
 
             // Check if user wallet exists
@@ -52,6 +77,25 @@ exports.createBet = async (req, res) => {
                 result: "Pending"
             });
             console.log("bets hai",previousOppositeBet)
+            // previousOppositeBet = {
+            //                         _id: new ObjectId('681eef8cfb3cb9ca608418c2'),
+            //                         userId: new ObjectId('681eedf4d71658883bc14e78'),
+            //                         matbet: "MAX O'DOWD RUN(NED VS SCO)ADV",
+            //                         mode: 'no',
+            //                         odds: 120,
+            //                         rate: 120,
+            //                         stake: 100,
+            //                         profitA: -100,
+            //                         balance: 9760,
+            //                         exposure: -120,
+            //                         noRuns: 25,
+            //                         winningRuns: 0,
+            //                         matchName: 'Netherlands v Scotland',
+            //                         result: 'Pending',
+            //                         __v: 0,
+            //                         createdAt: "2025-05-10T06:17:49.050Z",
+            //                         updatedAt: "2025-05-10T06:17:49.050Z"
+            //                         }
             if (previousOppositeBet) {
                 const prevRuns = oppositeMode === "yes" ? previousOppositeBet.yesRuns : previousOppositeBet.noRuns;
                 console.log("previose bet",prevRuns)
@@ -62,10 +106,11 @@ exports.createBet = async (req, res) => {
                     const prevExposure = Math.abs(Number(previousOppositeBet.exposure) || 0);
                     const prevProfitA = Math.abs(Number(previousOppositeBet.profitA) || 0);
                     const newProfitA = Math.abs(Number(profitA) || 0);
-
+                    console.log("prevExposure", prevExposure);
                     // const exposureUpdate = Math.abs(prevProfitA - newProfitA) + Math.abs(prevExposure-parsedExposure)-prevExposure;
                     const exposureUpdate = Math.abs(prevExposure - newProfitA)-prevExposure;
-                    userWallet.exposureBalance += exposureUpdate;
+                    // const exposureUpdate = Math.abs(Number(currentExposure)) - Math.abs(Number(previousOppositeBet.rate));
+                    userWallet.exposureBalance = currentExposure;
                     userWallet.balance =balance;
                     await userWallet.save();
                     previousOppositeBet.result="cancel";
@@ -74,6 +119,7 @@ exports.createBet = async (req, res) => {
                     return res.status(201).json("Bet cancel each other");
                     console.log(`Wallet updated for same runs and opposite bet: ${userId}, Balance = ${userWallet.balance}, Exposure = ${userWallet.exposureBalance}`);
                 }else if(prevRuns > runs){
+                    console.log("HERE1")
                     const prevExposure = Math.abs(Number(previousOppositeBet.exposure) || 0);
                     const prevProfitA = Math.abs(Number(previousOppositeBet.profitA) || 0);
                     const newProfitA = Math.abs(Number(profitA) || 0);
@@ -140,7 +186,7 @@ exports.createBet = async (req, res) => {
                        
                     }
                 } else {
-                   
+                   console.log("HERE@@2");
                 const YesRuns = mode === "yes" ? runs : undefined;
                 const NoRuns = mode === "no" ? runs : undefined;
     
@@ -168,6 +214,7 @@ exports.createBet = async (req, res) => {
 
                 }
             } else {
+                console.log("HERE@@3");
                 // No opposite bet found, update wallet and save normally
 
 
